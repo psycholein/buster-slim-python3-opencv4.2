@@ -31,8 +31,6 @@ RUN mv opencv_contrib-4.2.0 opencv_contrib
 
 RUN pip3 install numpy
 
-RUN mkdir -p /app
-
 RUN mkdir -p /opencv/build
 WORKDIR /opencv/build
 RUN cmake -D CMAKE_BUILD_TYPE=RELEASE \
@@ -47,5 +45,3 @@ RUN cmake -D CMAKE_BUILD_TYPE=RELEASE \
 RUN make -j4
 RUN make install
 RUN ldconfig
-
-WORKDIR /app
