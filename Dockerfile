@@ -45,3 +45,5 @@ RUN cmake -D CMAKE_BUILD_TYPE=RELEASE \
 RUN make -j4
 RUN make install
 RUN ldconfig
+
+WORKDIR /
